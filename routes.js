@@ -34,7 +34,7 @@ const routeHandler=(req,res)=>{
         res.write(`<a href='/'>Add user</a>`);
         return res.end();
     }
-    if(req.url==='/create-user'){
+    if(req.url==='/create-user' && req.method==='POST'){
        let body=[];
         req.on('data',(chunk)=>{
             body.push(chunk);
